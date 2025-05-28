@@ -9,8 +9,9 @@ use std::{
 };
 use tower::Service;
 
+/// comment
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
-pub(crate) struct PercentDecodedStr(Arc<str>);
+pub struct PercentDecodedStr(Arc<str>);
 
 impl PercentDecodedStr {
     pub(crate) fn new<S>(s: S) -> Option<Self>
@@ -23,7 +24,8 @@ impl PercentDecodedStr {
             .map(|decoded| Self(decoded.as_ref().into()))
     }
 
-    pub(crate) fn as_str(&self) -> &str {
+    /// comment
+    pub fn as_str(&self) -> &str {
         &self.0
     }
 }

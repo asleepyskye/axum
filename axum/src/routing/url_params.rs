@@ -3,10 +3,16 @@ use http::Extensions;
 use matchit::Params;
 use std::sync::Arc;
 
+/// comment
 #[derive(Clone)]
-pub(crate) enum UrlParams {
+pub enum UrlParams {
+    /// comment
     Params(Vec<(Arc<str>, PercentDecodedStr)>),
-    InvalidUtf8InPathParam { key: Arc<str> },
+    /// comment
+    InvalidUtf8InPathParam {
+        /// comment
+        key: Arc<str>
+    },
 }
 
 pub(super) fn insert_url_params(extensions: &mut Extensions, params: Params<'_, '_>) {
