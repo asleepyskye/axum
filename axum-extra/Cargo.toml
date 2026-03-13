@@ -94,9 +94,6 @@ tower = { version = "0.5.2", features = ["util"] }
 tower-http = { version = "0.6.0", features = ["map-response-body", "timeout"] }
 tracing-subscriber = "0.3.19"
 
-[lints]
-workspace = true
-
 [package.metadata.docs.rs]
 all-features = true
 
